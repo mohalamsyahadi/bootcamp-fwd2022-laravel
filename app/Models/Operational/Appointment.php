@@ -32,5 +32,19 @@ class Appointment extends Model
         'deleted_at'
     ];
 
+    public function doctor(){
+        // 3 parameters required (path model, field foreign key, field primary key from table hasMany/hasOne)
+        return $this->belongsTo ('app\Models\Operational\Doctor', 'doctor_id', 'id');
+    }
+
+    public function consultation(){
+        // 3 parameters required (path model, field foreign key, field primary key from table hasMany/hasOne)
+        return $this->belongsTo ('app\Models\MasterData\Consultation', 'consultation_id', 'id');
+    }
+
+    public function transaction(){
+        // 2 parameters required (path model, field foreign key)
+        return $this->hasOne ('app\Models\Operational\Appointment', 'appointment_id');
+    }
 
 }
