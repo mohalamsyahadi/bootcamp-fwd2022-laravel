@@ -26,5 +26,11 @@ class TypeUser extends Model
         'deleted_at'
     ];
 
+    // one to many
+    public function detail_user(){
+        // 2 parameters required (path model, field foreign key)
+        return $this->hasMany ('app\Models\ManagementAccess\DetailUser.php', 'type_user_id');
+    }
+
 
 }

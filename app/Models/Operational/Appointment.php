@@ -47,4 +47,9 @@ class Appointment extends Model
         return $this->hasOne ('app\Models\Operational\Appointment', 'appointment_id');
     }
 
+    public function user(){
+        // 3 parameters required (path model, field foreign key, field primary key from table hasMany/hasOne)
+        return $this->belongsTo ('app\Models\User', 'user_id', 'id');
+    }
+
 }

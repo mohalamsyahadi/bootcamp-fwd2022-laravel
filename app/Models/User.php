@@ -73,6 +73,6 @@ class User extends Authenticatable
 
     public function role_user(){
         // 2 parameters required (path model, field foreign key)
-        return $this->hasOne ('app\Models\ManagementAccess\RoleUser', 'user_id');
+        return $this->hasMany ('app\Models\ManagementAccess\RoleUser', 'user_id');
     }
 }

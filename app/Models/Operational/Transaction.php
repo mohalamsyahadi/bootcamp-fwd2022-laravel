@@ -32,5 +32,9 @@ class Transaction extends Model
         'deleted_at'
     ];
 
+    public function appointment(){
+        // 3 parameters required (path model, field foreign key, field primary key from table hasMany/hasOne)
+        return $this->belongsTo ('app\Models\Operational\Appointment', 'appointment_id', 'id');
+    }
 
 }
