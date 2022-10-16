@@ -28,10 +28,10 @@ class UpdateConfigPaymentRequest extends FormRequest
     {
         return [
             'fee' => [
-                'required', 'string',
+                'required', 'string', 'max:255',
             ],
             'vat' => [
-                'required', 'string',
+                'required', 'string', 'max:255',
             ],
         ];
     }
