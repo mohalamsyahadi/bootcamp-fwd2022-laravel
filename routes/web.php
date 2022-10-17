@@ -19,6 +19,7 @@ use App\Http\Controllers\Frontsite\PaymentController;
 
 Route::resource ('/', LandingController::class);  
 
+// Route group berarti mengelompokkan route dengan cara kerja/settingan route yang sama
 Route::group (['middleware' => ['auth:sanctum', 'verified']], function(){
     
     // appointment page
@@ -28,12 +29,11 @@ Route::group (['middleware' => ['auth:sanctum', 'verified']], function(){
     Route::resource('payment', PaymentController::class);
 
 });
-// Route::get('/', function () {
-//     return view('welcome'); 
-// });
+
 
 Route::group (['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => 
 ['auth:sanctum', 'verified']], function(){
+    
     return view('dashboard');
 });
 // Route::get('/', function () {
