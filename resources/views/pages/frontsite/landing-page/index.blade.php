@@ -1,1 +1,7 @@
-tahun depan punya kerja yang mapan dan nyaman
+@extends ('layouts.default')
+
+@section('title', 'home')
+
+@section('content')
+Home
+@endsection
