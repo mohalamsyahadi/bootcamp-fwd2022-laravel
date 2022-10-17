@@ -1,0 +1,1 @@
+tahun depan punya kerja yang mapan dan nyaman
