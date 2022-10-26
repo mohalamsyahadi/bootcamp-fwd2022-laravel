@@ -34,6 +34,12 @@ class StoreDoctorRequest extends FormRequest
             'name' => [
                 'required', 'string', 'max:255',
             ],
+            'fee' => [
+                'required', 'string', 'max:255',
+            ],
+            'photo' => [
+                'nullable', 'string', 'max:10000',
+            ],
         ];
     }
 }

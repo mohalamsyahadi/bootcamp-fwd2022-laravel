@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
+// frontsite routes
 use App\Http\Controllers\Frontsite\LandingController;
 use App\Http\Controllers\Frontsite\AppointmentController;
 use App\Http\Controllers\Frontsite\PaymentController;
+
+// backsite routes
+use App\Http\Controllers\Backsite\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
